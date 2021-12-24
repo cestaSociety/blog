@@ -38,15 +38,9 @@ const Comments = ({ frontMatter }) => {
   }
   return (
     <div id="comment">
-      {siteMetadata.comment && siteMetadata.comment.provider === 'giscus' && (
-        <GiscusComponent mapping={term} />
-      )}
-      {siteMetadata.comment && siteMetadata.comment.provider === 'utterances' && (
-        <UtterancesComponent issueTerm={term} />
-      )}
-      {siteMetadata.comment && siteMetadata.comment.provider === 'disqus' && (
-        <DisqusComponent frontMatter={frontMatter} />
-      )}
+      {siteMetadata.comment && siteMetadata.comment.provider === 'giscus' && <div />}
+      {siteMetadata.comment && siteMetadata.comment.provider === 'utterances' && <div />}
+      {siteMetadata.comment && siteMetadata.comment.provider === 'disqus' && <div />}
     </div>
   )
 }
